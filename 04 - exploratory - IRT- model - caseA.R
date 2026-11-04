@@ -39,7 +39,7 @@ clean_A <- CaseA[non_empty_rows, ]
 # This was the first model structure explored.
 # It specifies seven agency subconstructs as correlated factors.
 
-correlated_estructure <- mirt::mirt.model("Theta_Coagency = A1-A3
+correlated_structure <- mirt::mirt.model("Theta_Coagency = A1-A3
                                     Theta_Identity_Belonging = A4-A6  
                                     Theta_Motiv_Selfdet_Autonomy_Cont = A7-A11
                                     Theta_Hope = A12-A14
@@ -48,7 +48,7 @@ correlated_estructure <- mirt::mirt.model("Theta_Coagency = A1-A3
                                     Theta_Purpose = A24-A26
                                     COV = Theta_Coagency * Theta_Identity_Belonging * Theta_Motiv_Selfdet_Autonomy_Cont * Theta_Hope * Theta_SelfEff_SelfReac_Forethought_SelfRefl_Cont * Theta_GrowthMindset * Theta_Purpose",
                                    itemnames = clean_A)
-correlated_model <- mirt::mirt(data = clean_A, model = correlated_estructure, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000))
+correlated_model <- mirt::mirt(data = clean_A, model = correlated_structure, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000))
 
 # Fit the correlated seven-factor model
 mirt::coef(correlated_model, simplify = TRUE)
@@ -61,7 +61,7 @@ mirt::M2(correlated_model, na.rm = TRUE, QMC = TRUE)
 # general factor (Theta_CaseA) loading on all 26 items.
 
 
-bifactor_estructure <- mirt::mirt.model("Theta_Coagency = A1-A3
+bifactor_structure <- mirt::mirt.model("Theta_Coagency = A1-A3
                                     Theta_Identity_Belonging = A4-A6  
                                     Theta_Motiv_Selfdet_Autonomy_Cont = A7-A11
                                     Theta_Hope = A12-A14
@@ -73,7 +73,7 @@ bifactor_estructure <- mirt::mirt.model("Theta_Coagency = A1-A3
 
 
 # Fit the bifactor model                                                                  
-bifactor_model <- mirt::mirt(data = clean_A, model = bifactor_estructure, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000), missing = 'Complete')
+bifactor_model <- mirt::mirt(data = clean_A, model = bifactor_structure, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000), missing = 'Complete')
 
 mirt::coef(bifactor_model, simplify = TRUE)
 mirt::M2(bifactor_model, na.rm = TRUE, QMC = TRUE)
@@ -86,7 +86,7 @@ mirt::M2(bifactor_model, na.rm = TRUE, QMC = TRUE)
 # defined in terms of these seven dimensions.
 
 
-second_order_estr <- mirt::mirt.model("Theta_Coagency = A1-A3
+second_order_structure <- mirt::mirt.model("Theta_Coagency = A1-A3
                                     Theta_Identity_Belonging = A4-A6  
                                     Theta_Motiv_Selfdet_Autonomy_Cont = A7-A11
                                     Theta_Hope = A12-A14
@@ -96,7 +96,7 @@ second_order_estr <- mirt::mirt.model("Theta_Coagency = A1-A3
                                     Theta_Agency = Theta_Coagency, Theta_Identity_Belonging, Theta_Motiv_Selfdet_Autonomy_Cont,
                                     Theta_Hope, Theta_SelfEff_SelfReac_Forethought_SelfRefl_Cont, Theta_GrowthMindset, Theta_Purpose",
                                         itemnames = clean_A)
-second_order_model <- mirt::mirt(data = clean_A, model = second_order_estr, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000), missing = 'Complete')
+second_order_model <- mirt::mirt(data = clean_A, model = second_order_structure, itemtype = "gpcm", method = 'QMCEM', technical = list(NCYCLES = 10000), missing = 'Complete')
 
 # Fit the second-order factor model
 mirt::coef(second_order_model, simplify = TRUE)
