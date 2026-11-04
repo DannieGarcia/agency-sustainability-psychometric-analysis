@@ -48,3 +48,19 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Research data
+*.csv
+*.xlsx
+*.xls
+
+# Serialized analysis objects
+*.rds
+
+# Temporary and log files
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
