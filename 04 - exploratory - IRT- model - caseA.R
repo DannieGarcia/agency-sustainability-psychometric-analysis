@@ -11,6 +11,8 @@
 # All models are estimated using the generalized partial credit
 # model (GPCM) with the QMCEM estimation method.
 
+# The dataset is not included in this repository because permission
+# to publicly share the research data has not been obtained.
 
 
 # Exploratory Multidimensional Agency Models – Case A
