@@ -52,10 +52,11 @@ sustainability-agency-psychometric-analysis/
 │
 └── R/
     ├── 01_descriptive_analysis.R
-    ├── 02_classical_test_theory.R
-    ├── 03_exploratory_irt_model_case_A.R
-    ├── 04_exploratory_multidimensional_irt_all_cases.R
-    └── ...
+    ├── 02_CTT_Analysis.R
+    ├── 03_unidimensional_analysis.R
+    ├── 04_exploratory_irt_model_case_A.R
+    └── 05_exploratory_multidimensional_irt_all_cases.R
+    └──...
 ```
 
 Additional scripts and materials may be added as the repository develops.
