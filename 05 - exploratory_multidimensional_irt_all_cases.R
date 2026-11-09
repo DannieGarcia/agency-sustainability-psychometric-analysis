@@ -1,5 +1,9 @@
 # Exploratory Multidimensional Agency Models
 
+#This script explores alternative multidimensional item response theory (IRT) 
+#models to examine the structure of agency as a construct of sustainable 
+#development competence.
+
 # Note: The dataset used in this analysis is not included in this
 # repository because it contains data collected from human participants.
 # Individual-level response data are withheld to protect participants'
